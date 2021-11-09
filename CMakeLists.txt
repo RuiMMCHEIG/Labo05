@@ -3,4 +3,4 @@ project(Labo05_C_MCRM_PB)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Labo05_C_MCRM_PB main.cpp)
+add_executable(Labo05_C_MCRM_PB main.cpp Chrono.cpp Chrono.h)
