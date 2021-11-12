@@ -15,7 +15,8 @@
 #ifndef LABO05_C_MCRM_PB_CHRONO_H
 #define LABO05_C_MCRM_PB_CHRONO_H
 
-#endif //LABO05_C_MCRM_PB_CHRONO_H
+#include <ctime>
+#include <cassert>
 
 //-----------------------------------------------------------
 // Subprogram name: chronoStart()
@@ -41,3 +42,5 @@ void chronoStart();
 // Return: The time difference (type double)
 //-----------------------------------------------------------
 double chronoStop();
+
+#endif //LABO05_C_MCRM_PB_CHRONO_H

@@ -4,7 +4,8 @@
   Laboratory name : Labo_05_Chrono
   Author(s)       : Rui Carneiro & Bastien Pillonel
   Creation date   : 09.11.2021
-  Description     : Cpp file with all the definitions of the subprograms
+  Description     : Cpp file with all the definitions of the subprograms used
+                    for a chronometer.
 
   Comment(s)      : -
 
@@ -13,7 +14,6 @@
 */
 
 #include "Chrono.h"
-#include <ctime>
 
 using namespace std;
 
@@ -21,12 +21,12 @@ using namespace std;
 // Globale variable and constants declaration
 //-----------------------------------------------------------
 
-time_t timeStart;
+bool     isChronoStarted;
 
-bool isChronoStarted = false;
+time_t   timeStart;
 
 //-----------------------------------------------------------
-// Subprogramme chronoStart()
+// Subprogram chronoStart()
 //-----------------------------------------------------------
 
 void chronoStart(){
@@ -35,15 +35,12 @@ void chronoStart(){
 }
 
 //-----------------------------------------------------------
-// Subprogramme chronoStop()
+// Subprogram chronoStop()
 //-----------------------------------------------------------
 
 double chronoStop(){
-   if(!isChronoStarted){
-      return 0.;
-   }
-   else{
-      isChronoStarted = false;
-      return difftime(time(nullptr), timeStart);
-   }
+   assert(isChronoStarted);
+
+   isChronoStarted = false;
+   return difftime(time(nullptr), timeStart);
 }

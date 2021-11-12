@@ -21,55 +21,32 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <iomanip>
-#include <cmath>
 #include "Chrono.h"
+#include "Generator.h."
 
 using namespace std;
 
-//-----------------------------------------------------------
-// Subprogram name: dunningRequest()
-//-----------------------------------------------------------
-// Description: display a request message where
-// we ask for a number of dunning between a range
-// set in parameters.
-//
-// Parameters: Take 2 integers which are respectively the lower
-// and higher limits of the numbers of dunning accepted.
-//
-// Return: the number of dunning input by the user.
-//-----------------------------------------------------------
-int dunningRequest(int minRetry, int maxRetry);
-
 int main() {
 
-   //----------------------------------------------
    // Variables and constants declaration
-   //----------------------------------------------
-   const int   MIN_RETRY      =  1,
-               MAX_RETRY      =  10;
+   const int      MIN_RETRY      = 1,
+                  MAX_RETRY      = 10;
 
-   //----------------------------------------------
+   int            dunningNumber;
+
+   char           letterGenerated,
+                  letterTyped,
+                  rematch;
+
+   const string   dunningMessage = "How many dunning ";
+
    // User Message
-   //----------------------------------------------
    cout  << "This program tests your typing speed" << endl;
 
-   //----------------------------------------------
-   // Dunning request
-   //----------------------------------------------
-   dunningRequest(MIN_RETRY, MAX_RETRY);
+   // Game loop
+   do{
+
+   }while(rematch == 'y');
 
    return EXIT_SUCCESS;
 }
-
-int dunningRequest(int minRetry, int maxRetry){
-   // The display set automatically the spacing according to the number of digit of
-   // the lower and higher limits with log base 10 of the limits => cast to integers
-   cout  << "How many dunning ["
-         << setw(int(log(minRetry) / log(10)))  << minRetry << ".."
-         << setw(int(log(maxRetry) / log(10)))  << maxRetry << "] :";
-
-   return 0;
-}
-
-
