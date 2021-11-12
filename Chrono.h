@@ -18,29 +18,24 @@
 #include <ctime>
 #include <cassert>
 
-//-----------------------------------------------------------
-// Subprogram name: chronoStart()
-//-----------------------------------------------------------
-// Description: Take the actual time and set a flag (isChronoStarted)
-// to true to specify that the chrono is currently started.
-//
-// Parameters: -
-//
-// Return: -
-//-----------------------------------------------------------
+/*
+Name        chronoStart
+Goal        Take the actual time and specify that the chrono is started
+Param       n/a
+Return      n/a
+Exception   n/a
+*/
 void chronoStart();
 
-//-----------------------------------------------------------
-// Subprogram name: chronoStop()
-//-----------------------------------------------------------
-// Description: If the chrono hasn't been started yet we return
-// 0 (as a real life chronometer) else we set the flag
-// (isChronoStarted) to false and we return the time difference.
-//
-// Parameters: -
-//
-// Return: The time difference (type double)
-//-----------------------------------------------------------
+/*
+Name        chronoStop
+Goal        We stop the chrono and return the time diff.
+            For the developping part we add an assert which terminate
+            the program if the chrono has not been started before.
+Param       n/a
+Return      The time difference
+Exception   n/a
+*/
 double chronoStop();
 
 #endif //LABO05_C_MCRM_PB_CHRONO_H

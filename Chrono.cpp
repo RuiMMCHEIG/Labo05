@@ -15,29 +15,18 @@
 
 #include "Chrono.h"
 
-using namespace std;
-
-//-----------------------------------------------------------
-// Globale variable and constants declaration
-//-----------------------------------------------------------
-
+//Globale variable and constants declaration
 bool     isChronoStarted;
 
 time_t   timeStart;
 
-//-----------------------------------------------------------
-// Subprogram chronoStart()
-//-----------------------------------------------------------
-
+//Start a chrono
 void chronoStart(){
    time(&timeStart);
    isChronoStarted = true;
 }
 
-//-----------------------------------------------------------
-// Subprogram chronoStop()
-//-----------------------------------------------------------
-
+//Stop the chrono
 double chronoStop(){
    assert(isChronoStarted);
 

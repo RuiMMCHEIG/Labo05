@@ -18,16 +18,14 @@
 #include <cstdlib>
 #include <time.h>
 
-//----------------------------------------------------------------------------
-// Subprogram name: letterGenerator()
-//----------------------------------------------------------------------------
-// Description :  Generate a random lowercase or uppercase letter
-//
-// Parameters  :  lowercase = false   => generate uppercase letter
-//                lowercase = true    => generate lowercase letter
-//
-// Return      :  The letter generated
-//----------------------------------------------------------------------------
+/*
+Name        letterGenerator
+Goal        Generate a random lowercase or uppercase letter
+Param       lowercase         false   => generate uppercase letter
+                              true    => generate lowercase letter
+Return      The letter generated
+Exception   n/a
+*/
 char letterGenerator(bool lowercase);
 
 #endif //LABO05_C_MCRM_PB_GENERATOR_H

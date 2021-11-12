@@ -21,30 +21,74 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <iomanip>
 #include "Chrono.h"
 #include "Generator.h."
+#include "inputs.h"
 
 using namespace std;
 
 int main() {
 
-   // Variables and constants declaration
-   const int      MIN_RETRY      = 1,
-                  MAX_RETRY      = 10;
+   //Variables and constants declaration
+   const unsigned MIN_RETRY            =  1,
+                  MAX_RETRY            =  10,
+                  DISPLAY_SPACING      =  26;
 
-   int            dunningNumber;
+   const int      PRECISION            =  0,
+                  FINER_PRECISION      =  3;
+
+   string         dunningMessage       =  "How many dunning ",
+                  reflexInputMessage   =  "Letter : ",
+                  rematchMessage       =  "Would you like to replay : [y|n]";
+
+   unsigned       dunningNumber,
+                  correctInputCounter;
 
    char           letterGenerated,
                   letterTyped,
                   rematch;
 
-   const string   dunningMessage = "How many dunning ";
+   double         elapsedTime;
 
-   // User Message
+   //User Message
    cout  << "This program tests your typing speed" << endl;
 
-   // Game loop
+   //Game loop
    do{
+      //Reset counter
+      correctInputCounter  =  0;
+
+      //Dunning input
+      dunningNumber = getUnsigned(dunningMessage, MIN_RETRY, MAX_RETRY);
+      chronoStart();
+
+      //Reflex input loop
+      for(unsigned dunning = dunningNumber; dunning > 0; --dunning){
+         letterGenerated   =  letterGenerator(true);
+         letterTyped       =  getChar((reflexInputMessage + letterGenerated));
+
+         if(letterTyped == letterGenerated){
+            ++correctInputCounter;
+         }
+      }
+
+      elapsedTime =  chronoStop();
+
+      //Display results
+      cout  << setprecision(PRECISION) << fixed << endl  << endl
+            << setw(DISPLAY_SPACING)         << left
+            << "Number of correct answers"   << ": "  << correctInputCounter  << endl
+            << setw(DISPLAY_SPACING)         << left
+            << "Elapsed time"                << ": "  << elapsedTime          << endl
+            << setprecision(FINER_PRECISION) << fixed
+            << " => "   << (elapsedTime / (double) dunningNumber)
+            << " sec per letter" << endl  << endl;
+
+      //Asks the user if he wants to rematch
+      do{
+         rematch  =  getChar(rematchMessage);
+      }while(rematch != 'y' && rematch != 'n');
 
    }while(rematch == 'y');
 
