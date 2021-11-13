@@ -24,32 +24,6 @@
 using namespace std;
 
 /*
-Name        getInt
-Goal        Gets an integer from the user
-Param       message        Message to display to the user before the input
-Return      Valid user input
-Exception   n/a
-*/
-int getInt(const string& message);
-/*
-Name        getInt
-Goal        Gets an integer in a range from the user
-Param       message        Message to display to the user before the input
-Param       min            Lower part of the range
-Param       max            Higher part of the range
-Return      Valid user input
-Exception   n/a
-*/
-int getInt(const string& message, int min, int max);
-/*
-Name        getUnsigned
-Goal        Gets an unsigned interger from the user
-Param       message        Message to display to the user before the input
-Return      Valid user input
-Exception   n/a
-*/
-unsigned getUnsigned(const string& message);
-/*
 Name        getUnsigned
 Goal        Gets an unsigned integer in a range from the user
 Param       message        Message to display to the user before the input
@@ -67,15 +41,5 @@ Return      Valid user input
 Exception   n/a
 */
 char getChar(const string& message);
-/*
-Name        getChar
-Goal        Gets a character in a range from the user
-Param       message        Message to display to the user before the input
-Param       min            Lower part of the range
-Param       max            Higher part of the range
-Return      Valid user input
-Exception   n/a
-*/
-char getChar(const string& message, char min, char max);
 
 #endif //INPUTS_H

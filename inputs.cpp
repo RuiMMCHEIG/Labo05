@@ -16,65 +16,9 @@
 
 #include "inputs.h"
 
-//Get Integer without range
-int getInt(const string& message) {
-   int value;
-   bool isIncorrect = true;
-   do {
-      cout << message << " : ";
-      if (not(cin >> value)) {
-         cin.clear();
-      }
-      else {
-         isIncorrect = false;
-      }
-      cin.ignore(numeric_limits<streamsize>::max(), '\n');
-   } while(isIncorrect);
-   return value;
-}
-
-//Get Integer with range
-int getInt(const string& message, int min, int max) {
-   assert(min < max);
-   int value;
-   bool isIncorrect = true;
-   do {
-      cout << message << " [" << min << ".." << max << "] : ";
-      if (not(cin >> value)) {
-         cin.clear();
-      }
-      else if (value < min || value > max) {
-         cout << "La valeur entree doit etre entre "
-              << min << " et " << max << " : " << endl;
-      }
-      else {
-         isIncorrect = false;
-      }
-      cin.ignore(numeric_limits<streamsize>::max(), '\n');
-   } while (isIncorrect);
-   return value;
-}
-
-//Get Unsigned without range
-unsigned getUnsigned(const string& message) {
-   unsigned value;
-   bool isIncorrect = true;
-   do {
-      cout << message << " : ";
-      if (not(cin >> value)) {
-         cin.clear();
-      }
-      else {
-         isIncorrect = false;
-      }
-      cin.ignore(numeric_limits<streamsize>::max(), '\n');
-   } while (isIncorrect);
-   return value;
-}
-
 //Get Unsigned with range
 unsigned getUnsigned(const string& message, unsigned min, unsigned max) {
-   assert(min < max);
+   assert(min < max); //Sends an error if min and max don't make sense
    unsigned value;
    bool isIncorrect = true;
    do {
@@ -102,28 +46,6 @@ char getChar(const string& message) {
       cout << message << " : ";
       if (not(cin >> value)) {
          cin.clear();
-      }
-      else {
-         isIncorrect = false;
-      }
-      cin.ignore(numeric_limits<streamsize>::max(), '\n');
-   } while (isIncorrect);
-   return value;
-}
-
-//Get Char with range
-char getChar(const string& message, char min, char max) {
-   assert(min < max);
-   char value;
-   bool isIncorrect = true;
-   do {
-      cout << message << " [" << min << ".." << max << "] : ";
-      if (not(cin >> value)) {
-         cin.clear();
-      }
-      else if (value < min || value > max) {
-         cout << "La valeur entree doit etre entre "
-              << min << " et " << max << " : " << endl;
       }
       else {
          isIncorrect = false;
