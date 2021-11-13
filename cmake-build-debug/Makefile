@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\basti\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5284.51\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = C:\Users\basti\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5284.51\bin\cmake\win\bin\cmake.exe -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "G:\Mon Drive\HEIG-VD\PRG1\Labo\Labo_Chrono\Labo05_C-MCRM-PB"
+CMAKE_SOURCE_DIR = C:\Git\Labo05_C-MCRM-PB
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "G:\Mon Drive\HEIG-VD\PRG1\Labo\Labo_Chrono\Labo05_C-MCRM-PB\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Git\Labo05_C-MCRM-PB\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = "G:\Mon Drive\HEIG-VD\PRG1\Labo\Labo_Chrono\Labo05_C-MCRM-PB\
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	C:\Users\basti\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5284.51\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	C:\Users\basti\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5284.51\bin\cmake\win\bin\cmake.exe --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "G:\Mon Drive\HEIG-VD\PRG1\Labo\Labo_Chrono\Labo05_C-MCRM-PB\cmake-build-debug\CMakeFiles" "G:\Mon Drive\HEIG-VD\PRG1\Labo\Labo_Chrono\Labo05_C-MCRM-PB\cmake-build-debug\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Git\Labo05_C-MCRM-PB\cmake-build-debug\CMakeFiles C:\Git\Labo05_C-MCRM-PB\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "G:\Mon Drive\HEIG-VD\PRG1\Labo\Labo_Chrono\Labo05_C-MCRM-PB\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Git\Labo05_C-MCRM-PB\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,78 @@ Labo05_C_MCRM_PB/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo05_C_MCRM_PB.dir\build.make CMakeFiles/Labo05_C_MCRM_PB.dir/build
 .PHONY : Labo05_C_MCRM_PB/fast
 
+Chrono.obj: Chrono.cpp.obj
+.PHONY : Chrono.obj
+
+# target to build an object file
+Chrono.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo05_C_MCRM_PB.dir\build.make CMakeFiles/Labo05_C_MCRM_PB.dir/Chrono.cpp.obj
+.PHONY : Chrono.cpp.obj
+
+Chrono.i: Chrono.cpp.i
+.PHONY : Chrono.i
+
+# target to preprocess a source file
+Chrono.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo05_C_MCRM_PB.dir\build.make CMakeFiles/Labo05_C_MCRM_PB.dir/Chrono.cpp.i
+.PHONY : Chrono.cpp.i
+
+Chrono.s: Chrono.cpp.s
+.PHONY : Chrono.s
+
+# target to generate assembly for a file
+Chrono.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo05_C_MCRM_PB.dir\build.make CMakeFiles/Labo05_C_MCRM_PB.dir/Chrono.cpp.s
+.PHONY : Chrono.cpp.s
+
+Generator.obj: Generator.cpp.obj
+.PHONY : Generator.obj
+
+# target to build an object file
+Generator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo05_C_MCRM_PB.dir\build.make CMakeFiles/Labo05_C_MCRM_PB.dir/Generator.cpp.obj
+.PHONY : Generator.cpp.obj
+
+Generator.i: Generator.cpp.i
+.PHONY : Generator.i
+
+# target to preprocess a source file
+Generator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo05_C_MCRM_PB.dir\build.make CMakeFiles/Labo05_C_MCRM_PB.dir/Generator.cpp.i
+.PHONY : Generator.cpp.i
+
+Generator.s: Generator.cpp.s
+.PHONY : Generator.s
+
+# target to generate assembly for a file
+Generator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo05_C_MCRM_PB.dir\build.make CMakeFiles/Labo05_C_MCRM_PB.dir/Generator.cpp.s
+.PHONY : Generator.cpp.s
+
+inputs.obj: inputs.cpp.obj
+.PHONY : inputs.obj
+
+# target to build an object file
+inputs.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo05_C_MCRM_PB.dir\build.make CMakeFiles/Labo05_C_MCRM_PB.dir/inputs.cpp.obj
+.PHONY : inputs.cpp.obj
+
+inputs.i: inputs.cpp.i
+.PHONY : inputs.i
+
+# target to preprocess a source file
+inputs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo05_C_MCRM_PB.dir\build.make CMakeFiles/Labo05_C_MCRM_PB.dir/inputs.cpp.i
+.PHONY : inputs.cpp.i
+
+inputs.s: inputs.cpp.s
+.PHONY : inputs.s
+
+# target to generate assembly for a file
+inputs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Labo05_C_MCRM_PB.dir\build.make CMakeFiles/Labo05_C_MCRM_PB.dir/inputs.cpp.s
+.PHONY : inputs.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +233,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Labo05_C_MCRM_PB
+	@echo ... Chrono.obj
+	@echo ... Chrono.i
+	@echo ... Chrono.s
+	@echo ... Generator.obj
+	@echo ... Generator.i
+	@echo ... Generator.s
+	@echo ... inputs.obj
+	@echo ... inputs.i
+	@echo ... inputs.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

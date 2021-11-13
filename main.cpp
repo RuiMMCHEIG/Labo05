@@ -5,15 +5,13 @@
   Author(s)       : Rui Carneiro & Bastien Pillonel
   Creation date   : 09.11.2021
   Description     : This program asks how many letters he needs to generate.
-                    Then it display randoms letters one by one and the goal is,
+                    Then it displays randoms letters one by one and the goal is,
                     for the user, to retype as fast as possible the same letter.
                     At the end of the game, the program display the number of
-                    letters correctly typed, the total elapsed time (in sec)
+                    letters correctly typed, the elapsed time (in sec)
                     and the average time per letter.
 
-  Comment(s)      : Create subprogramms which are logically distributed and as
-                    reusable as possible.
-                    The main program represent the analyse part only.
+  Comment(s)      : -
 
   Compiler        : MingW-w64 g++ 11.2.0
   ---------------------------------------------------------------------------
@@ -33,14 +31,14 @@ int main() {
    //Variables and constants declaration
    const unsigned MIN_RETRY            =  1,
                   MAX_RETRY            =  10,
-                  DISPLAY_SPACING      =  26;
+                  DISPLAY_SPACING      =  30;
 
    const int      PRECISION            =  0,
                   FINER_PRECISION      =  3;
 
-   string         dunningMessage       =  "How many dunning ",
-                  reflexInputMessage   =  "Letter : ",
-                  rematchMessage       =  "Would you like to replay : [y|n]";
+   string         dunningMessage       =  "Nombre de relances ",
+                  reflexInputMessage   =  "Lettre : ",
+                  rematchMessage       =  "Voulez-vous rejouer : [o|n]";
 
    unsigned       dunningNumber,
                   correctInputCounter;
@@ -52,7 +50,7 @@ int main() {
    double         elapsedTime;
 
    //User Message
-   cout  << "This program tests your typing speed" << endl;
+   cout  << "Ce programme teste votre vitesse de frappe" << endl;
 
    //Game loop
    do{
@@ -78,19 +76,19 @@ int main() {
       //Display results
       cout  << setprecision(PRECISION) << fixed << endl  << endl
             << setw(DISPLAY_SPACING)         << left
-            << "Number of correct answers"   << ": "  << correctInputCounter  << endl
+            << "Nombre de reponses correctes"<< ": "  << correctInputCounter << endl
             << setw(DISPLAY_SPACING)         << left
-            << "Elapsed time"                << ": "  << elapsedTime          << endl
+            << "Temps ecoule"                << ": "  << elapsedTime << "s"  << endl
             << setprecision(FINER_PRECISION) << fixed
             << " => "   << (elapsedTime / (double) dunningNumber)
-            << " sec per letter" << endl  << endl;
+            << " sec. par lettre" << endl  << endl;
 
-      //Asks the user if he wants to rematch
+      //Asks the user if he wants a rematch
       do{
          rematch  =  getChar(rematchMessage);
-      }while(rematch != 'y' && rematch != 'n');
+      }while(rematch != 'o' && rematch != 'n');
 
-   }while(rematch == 'y');
+   }while(rematch == 'o');
 
    return EXIT_SUCCESS;
 }

@@ -4,9 +4,9 @@
   Laboratory name : Labo_05_Chrono
   Author(s)       : Rui Carneiro & Bastien Pillonel
   Creation date   : 11.11.2021
-  Description     : Header file with every prototype of the Generator.cpp file
+  Description     : Value generator
 
-  Comment(s)      : -
+  Comment(s)      :
 
   Compiler        : MingW-w64 g++ 11.2.0
   ---------------------------------------------------------------------------
@@ -20,9 +20,9 @@
 
 /*
 Name        letterGenerator
-Goal        Generate a random lowercase or uppercase letter
-Param       lowercase         false   => generate uppercase letter
-                              true    => generate lowercase letter
+Goal        Generates a random letter
+Param       lowercase         false   => generates uppercase letter
+                              true    => generates lowercase letter
 Return      The letter generated
 Exception   n/a
 */

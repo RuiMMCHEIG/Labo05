@@ -4,9 +4,9 @@
   Laboratory name : Labo_05_Chrono
   Author(s)       : Rui Carneiro & Bastien Pillonel
   Creation date   : 09.11.2021
-  Description     : Header file with every prototype of the Chrono.cpp file
+  Description     : Chronometer
 
-  Comment(s)      : -
+  Comment(s)      :
 
   Compiler        : MingW-w64 g++ 11.2.0
   ---------------------------------------------------------------------------
@@ -29,9 +29,7 @@ void chronoStart();
 
 /*
 Name        chronoStop
-Goal        We stop the chrono and return the time diff.
-            For the developping part we add an assert which terminate
-            the program if the chrono has not been started before.
+Goal        Stops the chrono and returns the time difference
 Param       n/a
 Return      The time difference
 Exception   n/a

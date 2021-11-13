@@ -1,24 +1,20 @@
 /*
------------------------------------------------------------------------------------
-Filename        : inputs.cpp
-Laboratory name : Labo05_C_MCRM_PB
-Author(s)       : Rui Carneiro, Bastien Pillonel
-Creation date   : 09.11.2021
-Description     : Functions to obtain a value from the user
-                  while checking his inputs
+  -----------------------------------------------------------------------------------
+  File            : inputs.cpp
+  Laboratory name : Labo05_C_MCRM_PB
+  Author(s)       : Rui Carneiro & Bastien Pillonel
+  Creation date   : 09.11.2021
+  Description     : Functions to obtain a value from the user
+                    while checking his inputs
 
-Comment(s)      : Allows to setup a range for input values
-                  Asks user inputs until value is correct and in range
+  Comment(s)      : Allows to setup a range for input values
+                    Asks user inputs until value is correct and in range
 
-Compiler        : Mingw-w64 g++ 11.2.0
------------------------------------------------------------------------------------
+  Compiler        : Mingw-w64 g++ 11.2.0
+   -----------------------------------------------------------------------------------
 */
 
-#include <iostream>
-#include <cassert>
-#include <limits>
-
-using namespace std;
+#include "inputs.h"
 
 //Get Integer without range
 int getInt(const string& message) {
